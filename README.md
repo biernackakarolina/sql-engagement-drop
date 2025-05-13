@@ -4,6 +4,7 @@ This project was a part of the MODE SQL Analytics Training. It provided the gene
 
 **Problem to solve:** Unexpected engagement drop on social network for communicating with coworkers.
 
+
 ## Data
 Table: platform_users
 | Variable | Description |
@@ -16,6 +17,8 @@ Table: platform_users
 | language:	| The chosen language of the user |
 
 Table: platform_events:
+| Variable | Description |
+| -------- | ----------- |
 | user_id:	| The ID of the user logging the event. Can be joined to user\_id in either of the other tables. |
 | occurred_at:	| The time the event occurred. |
 | event_type:	| The general event type. There are two values in this dataset: "signup_flow", which refers to anything occuring during the process of a user's authentication, and "engagement", which refers to general product usage after the user has signed up for the first time. |
@@ -24,11 +27,15 @@ event_name:	The specific action the user took. Possible values include: create_u
 | device: |	The type of device used to log the event. |
 
 Table: platform_emails
+| Variable | Description |
+| -------- | ----------- |
 | user_id:	| The ID of the user to whom the event relates. |
 | occurred_at:	| The time the event occurred. |
 | action:	| The name of the event that occurred. "sent_weekly_digest" means that the user was delivered a digest email showing relevant conversations from the previous day. "email_open" means that the user opened the email. "email_clickthrough" means that the user clicked a link in the email. |
 
 Table: benn.dimension_rollup_periods
+| Variable | Description |
+| -------- | ----------- |
 | period_id:	| This identifies the type of rollup period. The above dashboard uses period 1007, which is rolling 7-day periods. |
 | time_id:	| The identifier for any given data point — it's what you would put on a chart axis. If time_id is 2014-08-01, that means that is represents the rolling 7-day period leading up to 2014-08-01. |
 | pst_start:	| The start time of the period in PST. For 2014-08-01, you'll notice that this is 2014-07-25 — one week prior. Use this to join events to the table. |
