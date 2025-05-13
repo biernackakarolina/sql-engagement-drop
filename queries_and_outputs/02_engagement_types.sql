@@ -8,7 +8,7 @@ FROM
     (SELECT DATE_TRUNC('week', occurred_at) AS date,
             event_name,
             COUNT(DISTINCT user_id) AS users
-    FROM tutorial.search_events
+    FROM platform_events
     WHERE event_type = 'engagement'
     GROUP BY 1, 2) sub
     
