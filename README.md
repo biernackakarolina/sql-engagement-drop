@@ -4,8 +4,10 @@ This project was a part of the MODE SQL Analytics Training. It provided the gene
 
 **Problem to solve:** Unexpected engagement drop on social network for communicating with coworkers.
 
-## Database
+## Data
 Table: platform_users
+| Variable | Description |
+| -------- | ----------- |
 | user_id:	| A unique ID per user. Can be joined to user_id in either of the other tables. |
 | created_at:	| The time the user was created (first signed up) |
 | state: |	The state of the user (active or pending) |
