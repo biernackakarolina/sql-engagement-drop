@@ -1,6 +1,6 @@
 -- QUERY1: selecting distict devide name for later categorization
 SELECT DISTINCT device
-    FROM tutorial.platform_events
+    FROM platform_events
     WHERE event_name = 'login'
 
 -- QUERY2: count of active users by device type
@@ -14,7 +14,7 @@ FROM
     (SELECT DATE_TRUNC('week', occurred_at) AS date,
             device,
            COUNT(DISTINCT user_id) AS users
-    FROM tutorial.platform_events
+    FROM platform_events
     WHERE event_name = 'login'
     GROUP BY 1, 2) sub 
     
